@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Trabalho 6 - Listar alunos</title>
+</h:head>
+<h:body>
+	<p:outputLabel value="Alunos Cadastrados" />
+	<br />
+	<h:form>
+		<p:panelGrid columns="2" value="#{alunoController.alunos}" var="aluno">
+			<p:outputLabel value="Matrícula:" />
+			<p:outputLabel id="matricula" value="#{aluno.matricula}" />
+			<p:outputLabel value="Nome:" />
+			<p:outputLabel value="#{aluno.nome}" />
+			<p:outputLabel value="RA:" />
+			<p:outputLabel value="#{aluno.ra}" />
+		</p:panelGrid>
+		<br/><br/><br/>
+		<p:commandButton value="Voltar" onclick="history.go(-1)"/>
+	</h:form>
+</h:body>
+</html>

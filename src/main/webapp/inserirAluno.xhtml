@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Trabalho 6 -Inserir Aluno</title>
+</h:head>
+<h:body>
+	<h:form>
+		<p:outputLabel value="Inserir Aluno" />
+		<p:panelGrid columns="2">
+			<p:outputLabel value="Matrícula:" />
+			<p:inputText id="matricula" size="10" value="#{alunoController.matricula}" />
+			<p:outputLabel value="Nome:" />
+			<p:inputText size="20" value="#{alunoController.nome}" />
+			<p:outputLabel value="RA:" />
+			<p:inputText size="5" value="#{alunoController.ra}" />
+		</p:panelGrid>
+		<p:commandButton value="Inserir" action="#{alunoController.addAluno}" rendered="true"/>
+		<p:outputLabel value="#{alunoController.mensagem}" />
+		<p:commandButton value="Voltar" onclick="history.go(-1)"/>
+	</h:form>
+</h:body>
+</html>
